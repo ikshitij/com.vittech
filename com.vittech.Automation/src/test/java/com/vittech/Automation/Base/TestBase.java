@@ -11,7 +11,9 @@ public class TestBase {
 	@BeforeTest
 	public void setup() {
 	driver = new ChromeDriver();
-	driver.get ("https://demo.guru99.com/V1/index.php");
+	//driver.get ("https://demo.guru99.com/V1/index.php");
+	driver.get ("https://facebook.com");
+
 	driver.manage().window().maximize();
 	}
 	@AfterTest

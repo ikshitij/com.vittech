@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
 import java.util.Set;
 
 public class Helper {
@@ -30,6 +31,52 @@ public class Helper {
             alert.dismiss();
         }
     }
+    
+    public static void handleselectropdown (WebElement ele, int index)
+    {
+    try {
+    new Select(ele).selectByIndex(index);;
+    } catch (Exception e) {
+    e.printStackTrace();
+    }
+}
+    
+    
+    
+    
+    public static void handleselectdropdown (WebElement ele, String value)
+    {
+    try {
+    new Select(ele).selectByValue(value);
+    } catch (Exception e) {
+    e.printStackTrace();
+    }
+}
+    
+    
+    public static void handleselectdrapdown (String visibleText, WebElement ele)
+    {
+    try {
+    new Select(ele).selectByVisibleText(visibleText);
+    } catch (Exception e) {
+    e.printStackTrace();
+    }
+    }
+    
+    
+    public static void handleselectdropdown(String value, List<WebElement> ele)
+    {
+    for(WebElement el:ele)
+    {
+    if(el.getText().equals(value))
+    {
+    el.click();
+    break;
+    }
+    }
+    }
+    
+    
 
     // Capture screenshot
     public void captureScreenshot(String filePath) {
