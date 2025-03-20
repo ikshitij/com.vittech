@@ -8,7 +8,7 @@ import com.vittech.Automation.PageObject.*;
 
 
 public class LoginTC extends TestBase {
-	
+	public static void main(String[] args){
 	@Test 
 	public void selectByDate() throws InterruptedException {
 	Thread. sleep (3000);
@@ -26,5 +26,5 @@ public class LoginTC extends TestBase {
 	helper.captureScreenshot("/Users/kshitijsalunkhe/eclipse-workspace/com.vittech.Automation/screenshot/image.png");
 	Assert.assertEquals(driver.getTitle(), "GTPL Bank Manager HomePage");
 
-}
+}}
 }
